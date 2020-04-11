@@ -9,7 +9,8 @@
   <meta name="author" content="">
 
   <title>Impacts of Covid-19</title>
-
+  <!-- non Bootstrap CSS -->
+  <link href="static.animatedlogo/css/style.css" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -69,14 +70,37 @@
           </ul>
         </div>
       </nav>
-
-
       <div class="container-fluid">
-        <h1 class="mt-4">Pollution</h1>
-        <p>Type stuff here.</p>
-        <p>Type stuff here.</p>
+        <h1 class="ml3" align="center">Impacts of COVID-19</h1>
+        <h2>Pollution rates in Arizona Cities</h2>
+        <p>Choose a city from the dropdown. It will show the current pollution rates for the city. </p>
+        <div class="col-md-2">
+          <div class="well">
+            <h5>City in Arizona:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)">
+          </select>
       </div>
+      </div>
+      <div class = "row">
+      <div class="col-md-7">
+        <div id="gauge"></div>
+      </div>
+        <div class="col-md-5">
+          <h3 align="center">EPA Air Quality Index</h3>
+          <img align="center" src="static.animatedlogo/air.png" alt="air">
+        </div>
     </div>
+    
+      <p align="center">2019 Maricopa County historical data
+      <br> 
+      Max AQI: 147
+      <br> 
+      90th percentile AQI: 98
+      <br> 
+      Median AQI: 62
+      <br> 
+      <a align="center" href="https://aqs.epa.gov/aqsweb/airdata/download_files.html">EPA historical data</a>
+    </p>
     <!-- /#page-content-wrapper -->
 
   </div>
@@ -87,12 +111,24 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Menu Toggle Script -->
+  <script type="text/javascript" src="static/js/config.js"></script>
   <script>
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
   </script>
+  <script type="text/javascript" src = "static.animatedlogo/js/config.js"></script>
+  <!--plotly script for the display-->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!--anime javascript for animated header-->
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- D3 JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+  <!--logic specific for this html page-->
+<script type="text/javascript" src="static.animatedlogo/js/pollutionlogic.js"></script>
+
+
 
 </body>
 

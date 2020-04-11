@@ -8,3 +8,8 @@
   html {
     height: 100%;
   }
+  img {
+    width: 650px;
+    height: 350px;
+    align-self: center;
+  }
