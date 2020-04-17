@@ -27,7 +27,7 @@ def welcome():
     return render_template('index.html')
 
 @app.route("/index.html")
-def welcome():
+def welcome1():
     #call html template
     return render_template('index.html')
 
