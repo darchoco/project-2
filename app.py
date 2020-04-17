@@ -53,8 +53,9 @@ def unemployment():
     df = df[1:]
     #set state as the index so it can be used as the key
     df.set_index('State', inplace = True)
+    df = df.rename(columns = {"Unemployment Rate": "UnemploymentRate"})
     #save as a .json so that it can be ingested by javascript
-    df.to_json('unemployment_rate.json')
+    df.to_json('static/unemploymentData.json')
     #call html template
     return render_template('unemployment.html')
 
