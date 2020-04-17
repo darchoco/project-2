@@ -154,7 +154,7 @@ d3.json("static/unemploymentData.json").then(function(data) {
           }).addTo(map);
        
           map.attributionControl.addAttribution(
-            'Population data &copy; <a href="http://census.gov/">US Census Bureau</a>'
+            'Unemployment Data &copy; <a href="https://data.bls.gov/lausmap/showMap.jsp;jsessionid=F2F0F0E2E77AF22964728BF782648362._t3_07v">US Bureau of Labor Statistics</a>'
           );
       
           var legend = L.control({ position: "bottomright" });
